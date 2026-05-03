@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Deshi Shahi Cow",
+    "type": "Cow",
+    "breed": "Local Deshi",
+    "price": 120000,
+    "weight": 280,
+    "age": 3,
+    "location": "Bogura",
+    "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
+    "image": "https://i.postimg.cc/4y7YwX7B/cow1.jpg",
+    "category": "Large Animal"
+  },
+  {
+    "id": 2,
+    "name": "Sahiwal Premium Cow",
+    "type": "Cow",
+    "breed": "Sahiwal",
+    "price": 180000,
+    "weight": 350,
+    "age": 4,
+    "location": "Rajshahi",
+    "description": "High-quality Sahiwal breed with strong health and ভালো মাংস উৎপাদন।",
+    "image": "https://i.postimg.cc/8c9bYz6K/cow2.jpg",
+    "category": "Large Animal"
+  },
+  {
+    "id": 3,
+    "name": "Black Bengal Goat",
+    "type": "Goat",
+    "breed": "Black Bengal",
+    "price": 25000,
+    "weight": 40,
+    "age": 2,
+    "location": "Kushtia",
+    "description": "Popular Black Bengal goat, known for tasty meat and easy maintenance.",
+    "image": "https://i.postimg.cc/J0v6G1Zg/goat1.jpg",
+    "category": "Small Animal"
+  },
+  {
+    "id": 4,
+    "name": "Jamunapari Goat",
+    "type": "Goat",
+    "breed": "Jamunapari",
+    "price": 32000,
+    "weight": 55,
+    "age": 2.5,
+    "location": "Dhaka",
+    "description": "Large size Jamunapari goat, সুন্দর গঠন এবং সুস্থ।",
+    "image": "https://i.postimg.cc/3rH2K8pM/goat2.jpg",
+    "category": "Small Animal"
+  },
+  {
+    "id": 5,
+    "name": "Holstein Friesian Bull",
+    "type": "Cow",
+    "breed": "Holstein Friesian",
+    "price": 220000,
+    "weight": 420,
+    "age": 5,
+    "location": "Chattogram",
+    "description": "Imported breed, বড় আকৃতি এবং উচ্চ মানের মাংস।",
+    "image": "https://i.postimg.cc/fL2Jp7zT/cow3.jpg",
+    "category": "Large Animal"
+  },
+  {
+    "id": 6,
+    "name": "Deshi White Goat",
+    "type": "Goat",
+    "breed": "Local White",
+    "price": 20000,
+    "weight": 35,
+    "age": 1.8,
+    "location": "Sylhet",
+    "description": "Healthy white goat, suitable for small family Qurbani.",
+    "image": "https://i.postimg.cc/7Yy1Yk2n/goat3.jpg",
+    "category": "Small Animal"
+  }
+]
