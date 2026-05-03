@@ -43,7 +43,6 @@ const BookingForm = ({ user }) => {
               <input 
                 type="text" 
                 name="name"
-                defaultValue={user?.name || ""} 
                 placeholder="Ex: Abdus Samad" 
                 className="w-full py-3 px-0 bg-transparent border-b-2 border-zinc-100 dark:border-zinc-800 focus:border-primary outline-none transition-all duration-300 placeholder:text-zinc-300" 
                 required 
@@ -68,7 +67,7 @@ const BookingForm = ({ user }) => {
           <input 
             type="email" 
             name="email"
-            defaultValue={user?.email || ""} 
+            
             className="w-full py-3 px-0 bg-transparent border-b-2 border-zinc-100 dark:border-zinc-800 text-zinc-400 cursor-not-allowed italic" 
             readOnly 
           />
