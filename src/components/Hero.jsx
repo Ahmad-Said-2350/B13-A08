@@ -28,7 +28,6 @@ const Hero = () => {
             </Link>
           </div>
           
-          {/* Stats / Trust Badges (Extra touch for marks) */}
          
         </div>
       </div>

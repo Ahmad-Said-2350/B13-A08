@@ -7,7 +7,6 @@ const AnimalsCard = ({animal}) => {
               key={animal.id} 
               className="card bg-base-100 shadow-xl border border-base-200 group hover:border-primary/30 transition-all duration-300"
             >
-              {/* Image Section */}
               <figure className="relative h-60 overflow-hidden">
                <img 
                   src={animal.image} 
@@ -26,7 +25,6 @@ const AnimalsCard = ({animal}) => {
                 </div>
               </figure>
               
-              {/* Content Section */}
               <div className="card-body p-6">
                 <h3 className="card-title text-xl font-bold group-hover:text-primary transition-colors">
                   {animal.name}
@@ -53,7 +51,7 @@ const AnimalsCard = ({animal}) => {
                     </span>
                   </div>
                   <Link
-                    href={`/details-page/${animal.id}`} 
+                    href={`/animals/${animal.id}`} 
                     className="btn btn-primary btn-sm md:btn-md text-white rounded-lg shadow-md hover:shadow-primary/40"
                   >
                     View Details

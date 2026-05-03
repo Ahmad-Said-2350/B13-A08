@@ -5,7 +5,6 @@ const Navbar = ({ session, onLogout }) => {
   return (
     <div className="navbar bg-base-100 shadow-md px-2 md:px-8 sticky top-0 z-50">
       
-      {/* LEFT SECTION: Logo (Desktop) | Icon + Logo (Mobile) */}
       <div className="navbar-start w-auto lg:flex-1">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle lg:hidden">
@@ -22,13 +21,11 @@ const Navbar = ({ session, onLogout }) => {
           </ul>
         </div>
 
-        {/* Logo - Stays left on all devices */}
         <Link href="/" className="btn btn-ghost text-xl font-bold tracking-tight px-2">
           <span className="text-primary">Qurbani</span>Hat
         </Link>
       </div>
 
-      {/* CENTER SECTION: Nav Items (Visible only on Large screens) */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-medium gap-2">
           <li><Link href="/">Home</Link></li>
@@ -36,7 +33,6 @@ const Navbar = ({ session, onLogout }) => {
         </ul>
       </div>
 
-      {/* RIGHT SECTION: Auth Buttons (Visible on all devices) */}
       <div className="navbar-end gap-2">
         {session ? (
           <div className="flex items-center gap-3">

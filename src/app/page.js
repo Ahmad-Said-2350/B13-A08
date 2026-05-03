@@ -9,6 +9,7 @@ export default function Home() {
       <Hero></Hero>
       <FeaturedAnimals></FeaturedAnimals>
       <QurbaniTips></QurbaniTips>
+      
 x     
     </div>
   );
