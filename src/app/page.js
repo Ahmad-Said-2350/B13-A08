@@ -7,7 +7,7 @@ export default function Home() {
     <div>
 
       <Hero></Hero>
-      <FeaturedAnimals></FeaturedAnimal>
+      <FeaturedAnimals></FeaturedAnimals>
      
     </div>
   );
