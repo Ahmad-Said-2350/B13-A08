@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaWeightHanging } from 'react-icons/fa';
 
@@ -8,7 +9,9 @@ const AnimalsCard = ({animal}) => {
               className="card bg-base-100 shadow-xl border border-base-200 group hover:border-primary/30 transition-all duration-300"
             >
               <figure className="relative h-60 overflow-hidden">
-               <img 
+               <Image
+               width={500}
+               height={500}
                   src={animal.image} 
                   alt={animal.name} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
