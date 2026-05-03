@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { FaWeightHanging, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
 import AnimalsCard from './AnimalsCard';

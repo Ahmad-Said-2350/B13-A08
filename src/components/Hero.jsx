@@ -23,26 +23,13 @@ const Hero = () => {
             <Link href="/animals" className="btn btn-primary btn-lg px-8 text-white">
               Browse Animals
             </Link>
-            <button className="btn btn-outline btn-lg border-white text-white hover:bg-white hover:text-black">
+            <Link href="#qur"  className="btn btn-outline btn-lg border-white text-white hover:bg-white hover:text-black">
               View Qurbani Tips
-            </button>
+            </Link>
           </div>
           
           {/* Stats / Trust Badges (Extra touch for marks) */}
-          <div className="mt-10 flex flex-wrap justify-center gap-8 opacity-80 text-sm">
-            <div className="flex flex-col">
-              <span className="font-bold text-2xl">500+</span>
-              <span>Available Livestock</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-2xl">100%</span>
-              <span>Healthy & Verified</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-2xl">24/7</span>
-              <span>Expert Support</span>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
