@@ -10,7 +10,7 @@ export default function Home() {
       <FeaturedAnimals></FeaturedAnimals>
       <QurbaniTips></QurbaniTips>
       
-x     
+ 
     </div>
   );
 }
