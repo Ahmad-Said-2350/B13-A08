@@ -8,8 +8,8 @@
     "weight": 280,
     "age": 3,
     "location": "Bogura",
-    "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
-    "image": "https://i.postimg.cc/4y7YwX7B/cow1.jpg",
+    "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural food.",
+    "image": "https://i.ibb.co.com/m5xqCw9n/1.jpg",
     "category": "Large Animal"
   },
   {
@@ -21,8 +21,8 @@
     "weight": 350,
     "age": 4,
     "location": "Rajshahi",
-    "description": "High-quality Sahiwal breed with strong health and ভালো মাংস উৎপাদন।",
-    "image": "https://i.postimg.cc/8c9bYz6K/cow2.jpg",
+    "description": "High-quality Sahiwal breed with strong health and good meat production.",
+    "image": "https://i.ibb.co.com/0gtYX14/2.jpg",
     "category": "Large Animal"
   },
   {
@@ -35,7 +35,7 @@
     "age": 2,
     "location": "Kushtia",
     "description": "Popular Black Bengal goat, known for tasty meat and easy maintenance.",
-    "image": "https://i.postimg.cc/J0v6G1Zg/goat1.jpg",
+    "image": "https://i.ibb.co.com/4R2h7t9M/3.jpg",
     "category": "Small Animal"
   },
   {
@@ -47,8 +47,8 @@
     "weight": 55,
     "age": 2.5,
     "location": "Dhaka",
-    "description": "Large size Jamunapari goat, সুন্দর গঠন এবং সুস্থ।",
-    "image": "https://i.postimg.cc/3rH2K8pM/goat2.jpg",
+    "description": "Large size Jamunapari goat, beautiful structure and healthy.",
+    "image": "https://i.ibb.co.com/QFxXq24N/4.jpg",
     "category": "Small Animal"
   },
   {
@@ -60,8 +60,8 @@
     "weight": 420,
     "age": 5,
     "location": "Chattogram",
-    "description": "Imported breed, বড় আকৃতি এবং উচ্চ মানের মাংস।",
-    "image": "https://i.postimg.cc/fL2Jp7zT/cow3.jpg",
+    "description": "Imported breed, large size and high quality meat.",
+    "image": "https://i.ibb.co.com/mVFRKC1y/5.jpg",
     "category": "Large Animal"
   },
   {
@@ -74,7 +74,7 @@
     "age": 1.8,
     "location": "Sylhet",
     "description": "Healthy white goat, suitable for small family Qurbani.",
-    "image": "https://i.postimg.cc/7Yy1Yk2n/goat3.jpg",
+    "image": "https://i.ibb.co.com/35JcnL5w/6.jpg",
     "category": "Small Animal"
   }
-]
+ ]
