@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaWeightHanging, FaMapMarkerAlt, FaBirthdayCake, FaSyringe, FaClipboardCheck } from 'react-icons/fa';
 import BookingForm from '@/components/BookingForm'; 
+import { auth } from '@/lib/auth';
+import { headers } from 'next/headers';
 const AnimalsDpage = async ({ params }) => {
     const { id } = await params;
     const res = await fetch("https://b13-a08-kappa.vercel.app/data.json");
@@ -9,6 +11,8 @@ const AnimalsDpage = async ({ params }) => {
 
     
     if (!animal) return <div className="min-h-screen flex items-center justify-center text-2xl font-bold">Animal Not Found</div>;
+
+const session = await auth.api.getSession({ headers: await headers() });
 
     return (
         <div className="min-h-screen bg-base-100 py-12">
@@ -72,13 +76,14 @@ const AnimalsDpage = async ({ params }) => {
                                 <FaSyringe className="text-primary"/> Book This Animal
                             </h2>
                             
-                             
-                                <BookingForm/>
-                            
-                                <div className="text-center p-6 bg-base-200 rounded-2xl">
-                                    <p className="mb-4 font-medium">Please login to place a booking for this {animal.type.toLowerCase()}.</p>
-                                    <a href="/login" className="btn btn-primary w-full text-white">Login Now</a>
-                                </div>
+                             {session ? (
+  <BookingForm />
+) : (
+  <div className="text-center p-6 bg-base-200 rounded-2xl">
+    <p className="mb-4 font-medium">Please login to place a booking.</p>
+    <a href="/login" className="btn btn-primary w-full text-white">Login Now</a>
+  </div>
+)}
                             
                         </div>
                     </div>
