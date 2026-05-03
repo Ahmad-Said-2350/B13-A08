@@ -39,7 +39,7 @@ const QurbaniTips = () => {
           Everything you need to know before selecting your animal to ensure a perfect and meaningful sacrifice.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8">
           {tips.map((tip) => (
             <div key={tip.id} className="bg-base-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-base-300 group">
               <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">

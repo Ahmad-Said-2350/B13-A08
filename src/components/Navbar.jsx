@@ -1,10 +1,20 @@
 "use client";
 import Link from "next/link";
+import { useSession, signOut } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
-const Navbar = ({ session, onLogout }) => {
+const Navbar = () => {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await signOut();
+    router.push("/");
+  };
+
   return (
     <div className="navbar bg-base-100 shadow-md px-2 md:px-8 sticky top-0 z-50">
-      
+
       <div className="navbar-start w-auto lg:flex-1">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle lg:hidden">
@@ -12,15 +22,11 @@ const Navbar = ({ session, onLogout }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
             </svg>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-xl border border-base-200"
-          >
+          <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-xl border border-base-200">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/animals">All Animals</Link></li>
           </ul>
         </div>
-
         <Link href="/" className="btn btn-ghost text-xl font-bold tracking-tight px-2">
           <span className="text-primary">Qurbani</span>Hat
         </Link>
@@ -35,37 +41,29 @@ const Navbar = ({ session, onLogout }) => {
 
       <div className="navbar-end gap-2">
         {session ? (
-          <div className="flex items-center gap-3">
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar border-2 border-primary">
-                <div className="w-10 rounded-full">
-                  <img
-                    alt="User Profile"
-                    src={session.user.image || "https://i.ibb.co/mJR9Qxc/user-avatar.png"}
-                  />
-                </div>
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar border-2 border-primary">
+              <div className="w-10 rounded-full">
+                <img
+                  alt="User Profile"
+                  src={session.user.image || "https://i.ibb.co/mJR9Qxc/user-avatar.png"}
+                />
               </div>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-xl border border-base-200"
-              >
-                <li className="menu-title text-primary border-b border-base-200 mb-1">{session.user.name}</li>
-                <li><Link href="/my-profile">My Profile</Link></li>
-                <li><button onClick={onLogout} className="text-error font-semibold">Logout</button></li>
-              </ul>
             </div>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-xl border border-base-200">
+              <li className="menu-title text-primary border-b border-base-200 mb-1">{session.user.name}</li>
+              <li><Link href="/my-profile">My Profile</Link></li>
+              <li><button onClick={handleLogout} className="text-error font-semibold">Logout</button></li>
+            </ul>
           </div>
         ) : (
           <div className="flex gap-1 md:gap-2">
-            <Link href="/login" className="btn btn-primary btn-sm md:btn-md text-white px-4 md:px-6">
-              Login
-            </Link>
-            <Link href="/register" className="btn btn-outline btn-primary btn-sm md:btn-md hidden sm:inline-flex">
-              Register
-            </Link>
+            <Link href="/login" className="btn btn-primary btn-sm md:btn-md text-white px-4 md:px-6">Login</Link>
+            <Link href="/register" className="btn btn-outline btn-primary btn-sm md:btn-md hidden sm:inline-flex">Register</Link>
           </div>
         )}
       </div>
+
     </div>
   );
 };
