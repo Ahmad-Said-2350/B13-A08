@@ -50,7 +50,7 @@ const AnimalsCard = ({animal}) => {
                   <div>
                     <p className="text-xs opacity-50 uppercase font-bold tracking-wider">Price</p>
                     <span className="text-2xl font-black text-primary">
-                      ৳{animal.price.toLocaleString()}
+                      ${animal.price.toLocaleString()}
                     </span>
                   </div>
                   <Link
