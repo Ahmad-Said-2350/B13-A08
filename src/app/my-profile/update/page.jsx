@@ -10,9 +10,9 @@ const UpdateProfilePage = () => {
   const [loading, setLoading] = useState(false);
   const [previewUrl, setPreviewUrl] = useState(null);
 
-  const currentImage = previewUrl !== null
-    ? previewUrl
-    : (session?.user?.image || "https://i.ibb.co/mJR9Qxc/user-avatar.png");
+  const currentImage =
+    previewUrl ||
+    session?.user?.image;
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -21,14 +21,20 @@ const UpdateProfilePage = () => {
     const name = formData.get("name");
     const image = formData.get("image");
 
-    const { error } = await authClient.updateUser({ name, image });
+    const { error } = await authClient.updateUser({
+      name,
+      image: image || undefined,
+    });
 
     if (error) {
       toast.error("Update failed!");
     } else {
       toast.success("Profile updated!");
+      setPreviewUrl(image);
       router.refresh();
-      router.push("/my-profile");
+      setTimeout(() => {
+        router.push("/my-profile");
+      }, 500);
     }
     setLoading(false);
   };
@@ -44,7 +50,9 @@ const UpdateProfilePage = () => {
           <img
             src={currentImage}
             alt="Preview"
-            onError={(e) => e.target.src = "https://i.ibb.co/mJR9Qxc/user-avatar.png"}
+            onError={(e) =>
+              (e.target.src = "https://i.ibb.co/mJR9Qxc/user-avatar.png")
+            }
             className="w-24 h-24 rounded-full object-cover border-4 border-primary shadow-md"
           />
         </div>
@@ -70,15 +78,23 @@ const UpdateProfilePage = () => {
             <input
               type="text"
               name="image"
-              defaultValue={session?.user?.image || ""}
+              defaultValue={session?.user?.image }
               placeholder="https://example.com/photo.jpg"
               className="input input-bordered w-full"
               onChange={(e) => setPreviewUrl(e.target.value)}
             />
           </div>
 
-          <button type="submit" className="btn btn-primary w-full text-white" disabled={loading}>
-            {loading ? <span className="loading loading-spinner loading-sm"></span> : "Save Changes"}
+          <button
+            type="submit"
+            className="btn btn-primary w-full text-white"
+            disabled={loading}
+          >
+            {loading ? (
+              <span className="loading loading-spinner loading-sm"></span>
+            ) : (
+              "Save Changes"
+            )}
           </button>
         </form>
       </div>
