@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <Link href="/" className="link link-hover opacity-80">Home</Link>
               <Link href="/animals" className="link link-hover opacity-80">All Animals</Link>
-              <Link href="/login" className="link link-hover opacity-80">Login</Link>
+              <Link href="/my-profile" className="link link-hover opacity-80">my-profile</Link>
             </div>
           </div>
 
@@ -40,11 +40,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 opacity-80">
                 <FaMapMarkerAlt className="text-primary mt-1" size={16} />
-                <span>Boghura City, Bangladesh</span>
+                <span>Dhaka,Bangladesh</span>
               </li>
               <li className="flex items-center gap-3 opacity-80">
                 <FaPhoneAlt className="text-primary" size={16} />
-                <span>+880 1711-223344</span>
+                <span>+8801342179060</span>
               </li>
               <li className="flex items-center gap-3 opacity-80">
                 <FaEnvelope className="text-primary" size={16} />
