@@ -13,7 +13,6 @@ const FarmLive = () => {
   return (
     <div style={{ background: "#f8f6ff", borderTop: "1px solid #e9e4ff", borderBottom: "1px solid #e9e4ff", overflow: "hidden" }}>
 
-      {/* Animals walking */}
       <div style={{ position: "relative", height: 44, overflow: "hidden" }}>
         {[
           { emoji: "🐄", dur: "9s", delay: "0s", size: 28 },
@@ -31,7 +30,6 @@ const FarmLive = () => {
         ))}
       </div>
 
-      {/* Ticker */}
       <div style={{ borderTop: "1px solid #e9e4ff", padding: "10px 0", overflow: "hidden" }}>
         <div style={{ display: "flex", animation: "ft 22s linear infinite", width: "max-content" }}>
           {doubled.map((item, i) => (

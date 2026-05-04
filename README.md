@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+QurbaniHat
 
-## Getting Started
+A modern, clean marketplace to browse and book healthy livestock for Qurbani.
+Built for trust — verified animals, transparent pricing, easy booking.
 
-First, run the development server:
+ 
+Overview
+QurbaniHat connects buyers with trusted livestock sellers across Bangladesh. Browse cows and goats by breed, weight, and location — then book directly from the platform after signing in. No middlemen, no confusion.
+ 
+Live Site
+https://b13-a08-kappa.vercel.app/
+ 
+What's Inside
+Home — Hero banner, featured animals, live farm ticker with walking animal animation, and Qurbani tips section.
+All Animals — Full livestock listing with sort by price (low to high / high to low). Each card shows breed, weight, location, and price at a glance.
+Animal Detail — Complete animal profile with image, age, weight, location, breed, and description. Booking form is gated — only visible after login.
+Booking — Simple form with name, email, phone, address. Submits with a success toast. No database storage — just the experience.
+Auth — Email/password and Google login via Better Auth. Register with name, email, photo URL, and password. Redirects handled cleanly.
+My Profile — Shows logged-in user's name, photo, and email. Update name and photo URL with live image preview before saving.
+ 
 
-```bash
+
+Tech Stack
+Next.js 15          — App Router, server + client components
+Better Auth         — Email/password + Google OAuth
+MongoDB             — User data via mongodbAdapter
+Tailwind CSS        — Utility-first styling
+DaisyUI             — Component library on top of Tailwind
+React Spring        — Animal walking animation
+React Toastify      — Success and error notifications
+React Icons         — Icon set throughout the UI
+ 
+Getting Started
+bashgit clone https://github.com/your-username/b13-a08
+cd b13-a08
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a .env.local file in the root:
+BETTER_AUTH_SECRET            = your_secret_key
+BETTER_AUTH_URL               = http://localhost:3000
+MONGODB_URI                   = your_mongodb_connection_string
+GOOGLE_CLIENT_ID              = your_google_client_id
+GOOGLE_CLIENT_SECRET          = your_google_client_secret
+ 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+NPM Packages Used:
+bashbetter-auth
+@react-spring/web
+react-toastify
+react-icons
+animate.css
+ 
+Notes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Private routes redirect to /login if unauthenticated
+Booking form does not persist data — toast only
+Profile photo updates with live preview before saving
+All routes work correctly after Vercel deployment
 
-## Learn More
+ 
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Crafted for Qurbani season — simple, honest, functional.
