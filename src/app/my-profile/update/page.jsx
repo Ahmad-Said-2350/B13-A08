@@ -1,5 +1,6 @@
 "use client";
 import { useSession, authClient } from "@/lib/auth-client";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -47,7 +48,7 @@ const UpdateProfilePage = () => {
         </h2>
 
         <div className="flex justify-center mb-6">
-          <img
+          <Image
             src={currentImage}
             alt="Preview"
             onError={(e) =>

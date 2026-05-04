@@ -3,6 +3,7 @@ import { useSession } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const MyProfilePage = () => {
   const { data: session, isPending, refetch } = useSession();
@@ -34,7 +35,7 @@ const MyProfilePage = () => {
       <div className="card bg-base-100 shadow-xl w-full max-w-md p-8 text-center">
 
         <div className="flex justify-center mb-4">
-          <img
+          <Image
             src={image}
             alt="Profile"
             onError={(e) => e.target.src = "https://i.ibb.co/mJR9Qxc/user-avatar.png"}
