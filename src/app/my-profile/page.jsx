@@ -36,6 +36,8 @@ const MyProfilePage = () => {
 
         <div className="flex justify-center mb-4">
           <Image
+          width={500}
+          height={500}
             src={image}
             alt="Profile"
             onError={(e) => e.target.src = "https://i.ibb.co/mJR9Qxc/user-avatar.png"}

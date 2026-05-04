@@ -49,6 +49,8 @@ const UpdateProfilePage = () => {
 
         <div className="flex justify-center mb-6">
           <Image
+          width={500}
+          height={500}
             src={currentImage}
             alt="Preview"
             onError={(e) =>
