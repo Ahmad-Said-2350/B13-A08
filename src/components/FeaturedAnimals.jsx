@@ -4,7 +4,7 @@ import { FaWeightHanging, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
 import AnimalsCard from './AnimalsCard';
 
 const FeaturedAnimals = async () => {
-  const res = await fetch("https://b13-a08-kappa.vercel.app/data.json");
+  const res = await fetch("https://b13-a08-p.vercel.app/data.json",{cache:"no-store"});
   const featured = await res.json();
 
   const featuredAnimals = featured.slice(0,4) 

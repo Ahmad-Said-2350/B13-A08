@@ -5,7 +5,7 @@ import { auth } from '@/lib/auth';
 import { headers } from 'next/headers';
 const AnimalsDpage = async ({ params }) => {
     const { id } = await params;
-    const res = await fetch("https://b13-a08-kappa.vercel.app/data.json");
+    const res = await fetch("https://b13-a08-p.vercel.app/data.json",{cache:"no-store"});
     const data = await res.json();
     const animal = data.find(p => p.id == id);
 

@@ -8,7 +8,7 @@ const AllAnimalsPage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://b13-a08-kappa.vercel.app/data.json")
+        fetch("https://b13-a08-p.vercel.app/data.json",{cache:"no-store"})
             .then(res => res.json())
             .then(data => {
                 setAnimals(data);
